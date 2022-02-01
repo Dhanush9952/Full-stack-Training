@@ -1,0 +1,24 @@
+<div class="container">  
+    <p>bootstrap-tutorial works!</p>
+    <div class="modal-body">
+        <hr>
+        <h5>Tooltips in a modal</h5>
+        <p><a href="#" class="tooltip-test" title="Tooltip-1">This link</a> and <a href="#" class="tooltip-test"
+                title="Tooltip-2">that link</a> have tooltips on hover.</p>
+    </div>
+</div>
+<div class="container">  
+      <h3>Popover Example</h3>  
+      <a href="#" data-toggle="popover" title="Hello" data-content="Some content inside the popover">Toggle popover</a>  
+    <hr>
+    <h5>Popover in a modal</h5>
+    <p>This <a href="#" role="button" class="btn btn-danger popover-test" title="Popover title"
+            data-content="Popover body content is set in this attribute.">Go To Top</a> triggers a popover on click.</p>
+
+</div>  
+  
+<script>  
+    $(document).ready(function () {
+        $('[data-toggle="popover"]').popover();
+    });  
+</script>  
