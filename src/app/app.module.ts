@@ -18,7 +18,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { BootstrapTutorialComponent } from './bootstrap-tutorial/bootstrap-tutorial.component';
 import { CheckboxesComponent } from './Angular-Tutorial/checkboxes/checkboxes.component';
 import { MaterialTableComponent } from './Angular-Tutorial/material-table/material-table.component' ;
-
+import { AppMaterialModule } from "./app.material-module";
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +38,7 @@ import { MaterialTableComponent } from './Angular-Tutorial/material-table/materi
     MatSelectModule,
     MatTabsModule,
     MatIconModule,
+    AppMaterialModule,
     MatButtonModule
   ],
   providers: [],
