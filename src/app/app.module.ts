@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,12 +18,18 @@ import { BootstrapTutorialComponent } from './bootstrap-tutorial/bootstrap-tutor
 import { CheckboxesComponent } from './Angular-Tutorial/checkboxes/checkboxes.component';
 import { MaterialTableComponent } from './Angular-Tutorial/material-table/material-table.component' ;
 import { AppMaterialModule } from "./app.material-module";
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { GreetingsComponent } from './Angular-Tutorial/greetings/greetings.component';
+import { CarComponent } from './Angular-Tutorial/car/car.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     BootstrapTutorialComponent,
     CheckboxesComponent,
     MaterialTableComponent,
+    GreetingsComponent,
+    CarComponent,
 
     
   ],
@@ -39,7 +44,9 @@ import { AppMaterialModule } from "./app.material-module";
     MatTabsModule,
     MatIconModule,
     AppMaterialModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

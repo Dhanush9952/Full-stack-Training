@@ -42,7 +42,26 @@ export class AppComponent {
 
   headElements = ['ID', 'First', 'Last', 'Handle'];
 
+  //Event Handling - Click Event
+  clickexample(){
+    alert("Hello");
+  }
+  //Event Handling - Key Event
+  tracker = 0;
+  keyexmaple(event: { key: any; }){
+    let key = event.key;
+    this.tracker++;
+    if(this.tracker >= 5)
+    alert(key);
+  }
+  insert = "King";
+  onInfoReceived(event: { price: any; brand: any; }) {
+    let price = event.price;
+    let brand = event.brand;
+    alert(`Price: ${price}, Brand: ${brand}`);
+  }
 }
+
 
 
 
