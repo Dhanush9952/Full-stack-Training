@@ -30,6 +30,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDividerModule } from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {MatListModule} from '@angular/material/list';
     CarComponent,
     ButtonsComponent,
     MaterialButtonsComponent,
-    FormsComponent
+    FormsComponent,
+    NavComponent
     
   ],
   imports: [
