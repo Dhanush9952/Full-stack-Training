@@ -7,8 +7,8 @@ import { ButtonsComponent } from './buttons/buttons.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
-import {MatTableModule} from '@angular/material/table'
-
+import {MatTableModule} from '@angular/material/table';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs' ;
 import { MatIconModule } from '@angular/material/icon' ;
@@ -21,6 +21,15 @@ import { AppMaterialModule } from "./app.material-module";
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { GreetingsComponent } from './Angular-Tutorial/greetings/greetings.component';
 import { CarComponent } from './Angular-Tutorial/car/car.component';
+import { MaterialButtonsComponent } from './materialbutton/material-buttons.component';
+import { FormsComponent } from './Angular-Tutorial/forms/forms.component';
+
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDividerModule } from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -30,7 +39,9 @@ import { CarComponent } from './Angular-Tutorial/car/car.component';
     MaterialTableComponent,
     GreetingsComponent,
     CarComponent,
-
+    ButtonsComponent,
+    MaterialButtonsComponent,
+    FormsComponent
     
   ],
   imports: [
@@ -47,6 +58,14 @@ import { CarComponent } from './Angular-Tutorial/car/car.component';
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
+    MatTableModule,
+    MatRadioModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatCardModule,
+    MatDividerModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

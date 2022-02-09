@@ -6,7 +6,8 @@ import { MatTabsModule } from '@angular/material/tabs' ;
 import { MatIconModule } from '@angular/material/icon' ;
 import { MatFormFieldModule } from '@angular/material/form-field' ;
 import { MatSelectModule } from '@angular/material/select' ;
-
+import { FormControl } from "@angular/forms";
+import { Validators } from "@angular/forms";
 
 
 @Component({
@@ -60,6 +61,9 @@ export class AppComponent {
     let brand = event.brand;
     alert(`Price: ${price}, Brand: ${brand}`);
   }
+
+  favoriteSeason!: string;
+  seasons: string[] = ['Winter', 'Spring', 'Summer', 'Autumn'];
 }
 
 

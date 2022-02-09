@@ -2,8 +2,8 @@
 <div class="container">
     <h1 class="heading"><strong>Services </strong>Angular</h1>
  
-    <button type="button" (click)="getProducts()" class="btn btn-primary">Generate</button>
- 
+  
+    <button mat-raised-button color="primary" (click)="getProducts()">Generate</button>
      <div class='table-responsive'>
          <br>
             <table class='table'>
@@ -47,12 +47,12 @@
 </div>
 
 <app-bootstrap-tutorial></app-bootstrap-tutorial>
-<app-checkboxes></app-checkboxes>
 
 <div class="container">
-<button mat-button color="primary">Default Button</button>
-<button mat-raised-button color="accent">Raised Button</button>
-<button mat-raised-button color="primary">Raised Button</button>
+  <h2>Material Buttons Example:</h2>
+<button mat-button color="primary">mat-raised-button Button</button>
+<button mat-raised-button color="accent">Color: Accent Button</button>
+<button mat-raised-button color="primary">Color: Primary Button</button>
 <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
   <mat-icon>public</mat-icon>
   <mat-icon>person_add</mat-icon>
@@ -64,19 +64,22 @@
 
 <div class="container">
 <app-checkboxes></app-checkboxes>
-<div (click)="clickexample()">Hello</div>
+<button mat-raised-button color="accent"><div (click)="clickexample()">Hello</div></button>
 <input (keyup)="keyexmaple($event)">
-<button>Angular</button>
 <app-greetings [name]="insert"></app-greetings>
 <app-car
 [price]="100000"
-brand="`tesla`"
+brand="'Tesla'"
 (sendPurchaseInfo) ="onInfoReceived($event)"
 ></app-car>
+<h2>Material Tabs Example:</h2>
 <mat-tab-group>
-  <mat-tab label="First"> Content 1 </mat-tab>
-  <mat-tab label="Second"> Content 2 </mat-tab>
-  <mat-tab label="Third"> Content 3 </mat-tab>
+  <mat-tab label="Table-1"> <app-material-table></app-material-table> </mat-tab>
+  <mat-tab label="Table-2"> <app-material-table></app-material-table> </mat-tab>
+  <mat-tab label="Table-3"> <app-material-table></app-material-table> </mat-tab>
 </mat-tab-group>
-<app-material-table></app-material-table>
+
+<app-material-buttons></app-material-buttons>>
+<app-forms></app-forms>
 </div>
+
