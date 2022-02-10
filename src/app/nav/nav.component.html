@@ -8,13 +8,13 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Archives</a>
+                        <a class="nav-link" routerLink="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" routerLink="/Login">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" routerLink="/Register">Register</a>
                     </li>
                 </ul>
                 <form #loginForm="ngForm" class="d-flex" (ngSubmit)="login()" autocomplete="off">

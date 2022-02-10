@@ -1,4 +1,6 @@
+import { Variable } from '@angular/compiler/src/render3/r3_ast';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-car',
@@ -24,5 +26,21 @@ export class CarComponent implements OnInit {
         brand: this.brand
       }
     );
+  }
+
+  num!: boolean;
+  num1!: boolean;
+  server = 'Disabled';
+  clicker ='Click below button to enable';
+  clicker1 ='';
+
+  get(event: Event){
+    this.num = true;
+    this.server = 'Enabled';
+    this.clicker = '***Thank You!!!***';
+  }
+  get1(event: Event){
+    this.num1 = true;
+    this.clicker1 = 'Slider also enabled!'
   }
 }

@@ -31,6 +31,17 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatDividerModule } from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import { NavComponent } from './nav/nav.component';
+import { ParentComponent } from './Component-Interaction/parent/parent.component';
+import { ChildComponent } from './Component-Interaction/child/child.component';
+import { VoterComponent } from './Component-Interaction/voter.component';
+import { VoteTakerComponent } from './Component-Interaction/votetaker.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle' ;
+
+import { HomeComponent } from './Home';
+import { LoginComponent } from './Login';
+import { RegisterComponent } from './Register';
+import { appRoutingModule } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -43,7 +54,14 @@ import { NavComponent } from './nav/nav.component';
     ButtonsComponent,
     MaterialButtonsComponent,
     FormsComponent,
-    NavComponent
+    NavComponent,
+    ParentComponent,
+    ChildComponent,
+    VoterComponent,
+    VoteTakerComponent,
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent
     
   ],
   imports: [
@@ -67,7 +85,11 @@ import { NavComponent } from './nav/nav.component';
     MatNativeDateModule,
     MatCardModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule,
+    MatSlideToggleModule,
+    appRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

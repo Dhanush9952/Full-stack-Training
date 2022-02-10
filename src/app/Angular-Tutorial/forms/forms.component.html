@@ -2,49 +2,50 @@
 <p>forms works!</p>
 
 <div class="container">
-    <h1>User Registration Form</h1>
-    
-    <form action="" #login="ngForm" (ngSubmit)="submit(login)">
-        <div class="form-group">
-            <label for="firstname">FirstName</label>
-            <input type="text" name="firstname" class="formcontrol" ngModel> 
-        </div>
-        <pre></pre>
-        <div class="form-group">
-            <label for="lastname">lastName</label>
-            <input type="text" name="lastname" class="formcontrol" ngModel> 
-        </div>
-        <pre></pre>
-        <div class="form-group">
-            <label for="email">Email-ID</label>
-            <input type="email" name="email" class="formcontrol" ngModel> 
-        </div>
-        <pre></pre>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" name="password" class="formcontrol" placeholder="Enter your password" ngModel> 
-        </div>
-        <pre></pre>
-        <button mat-raised-button color="accent" type="submit">Submit</button>
-    </form>
-</div><br><br><hr>
+  <h1>User Registration Form</h1>
+
+  <form action="" #login="ngForm" (ngSubmit)="submit(login)">
+    <div class="form-group">
+      <label for="firstname">FirstName :</label>
+      <input type="text" name="firstname" class="formcontrol" ngModel>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+      <label for="lastname">lastName :</label>
+      <input type="text" name="lastname" class="formcontrol" ngModel>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+      <label for="email">Email-ID :</label>
+      <input type="email" name="email" class="formcontrol" ngModel>
+    </div>
+    <pre></pre>
+    <div class="form-group">
+      <label for="password">Password :</label>
+      <input type="password" name="password" class="formcontrol" placeholder="Enter your password" ngModel>
+    </div>
+    <pre></pre>
+    <button mat-raised-button color="accent" type="submit">Submit</button>
+  </form>
+</div><br><br>
+<hr>
 
 
 <!-- Legacy form field -->
-<div class="container" >
-    <h2>Angular Material Form Field Example:</h2>
+<div class="container">
+  <h2>Angular Material Form Field Example:</h2>
 
 
   <div class="example message">
     <mat-form-field appearance="standard" class="email">
       <mat-label>Email Address:</mat-label>
-      <input matInput placeholder="Your email" [formControl]= "email" required>
+      <input matInput placeholder="Your email" [formControl]="email" required>
       <mat-icon matSuffix>mail_outline</mat-icon>
       <mat-hint>Enter your Email Address</mat-hint>
-      <mat-error *ngIf = "email.invalid">{{getErrorMessage()}}</mat-error>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
     </mat-form-field>
   </div>
-<!-- 
+  <!-- 
   <div class = "example message">  
     <mat-form-field appearance = "fill">  
       <mat-label> Email ID </mat-label>  
@@ -82,17 +83,33 @@
     </mat-form-field>
   </p>
 
-  <button mat-raised-button color="warn" type="submit" class="reset-btn">Reset</button> 
+  <button mat-raised-button color="warn" type="reset" class="reset-btn">Reset</button>
   <button mat-raised-button color="primary" type="submit" class="submit-btn">Submit</button>
-<mat-divider></mat-divider>
-<mat-list>
-  <mat-list-item>Item 1</mat-list-item>
   <mat-divider></mat-divider>
-  <mat-list-item>Item 2</mat-list-item>
-  <mat-divider></mat-divider>
-  <mat-list-item>Item 3</mat-list-item>
-</mat-list>
-<mat-divider [vertical]="true"></mat-divider>
+  <mat-list>
+    <mat-list-item>Item 1</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Item 2</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>Item 3</mat-list-item>
+  </mat-list>
+  <mat-divider [vertical]="true"></mat-divider>
 
 </div>
 <hr>
+
+<div class="container">
+  <form style="width:300px">  
+      <div class="form-group">  
+          <label for="exampleInputEmail1">Email address</label>  
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">  
+        </div>  
+      <div class="form-group">  
+          <label for="exampleInputPassword1">Password</label>  
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">  
+        </div>  
+        
+      <button type="submit" class="btn btn-success">Login</button>  
+  </form>  
+</div>
+
