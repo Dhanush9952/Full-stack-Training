@@ -42,6 +42,7 @@ import { HomeComponent } from './Home';
 import { LoginComponent } from './Login';
 import { RegisterComponent } from './Register';
 import { appRoutingModule } from './app.routing';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -89,6 +90,7 @@ import { appRoutingModule } from './app.routing';
     MatGridListModule,
     MatSlideToggleModule,
     appRoutingModule,
+    HttpClientModule
 
   ],
   providers: [],

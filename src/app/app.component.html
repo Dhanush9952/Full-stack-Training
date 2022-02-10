@@ -5,8 +5,11 @@
 <div class="container">
     <h1 class="heading"><strong>Services </strong>Angular</h1>
  
+    <ul>
+      <li *ngFor='let user of users'>{{user.id}} - {{user.userName}}</li>
+    </ul>
   
-    <button mat-raised-button color="primary" (click)="getProducts()">Generate</button>
+    <!-- <button mat-raised-button color="primary" (click)="getProducts()">Generate</button> -->
      <div class='table-responsive'>
          <br>
             <table class='table'>

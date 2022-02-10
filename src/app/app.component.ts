@@ -8,6 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field' ;
 import { MatSelectModule } from '@angular/material/select' ;
 import { FormControl } from "@angular/forms";
 import { Validators } from "@angular/forms";
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -17,23 +18,23 @@ import { Validators } from "@angular/forms";
 })
 
 
-export class AppComponent {
-  title = 'Test-1';
+export class AppComponent implements OnInit{
+  title = 'Training';
   currentItem = 'Television';
 
 
   products: Product[] = [];
 
-  productService;
+  // productService;
 
-  constructor(){
-    this.productService=new ProductService();
-  }
+  // constructor(){
+  //   this.productService=new ProductService();
+  // }
 
-  getProducts() {
+  // getProducts() {
     
-    this.products=this.productService.getProducts();
-  }
+  //   this.products=this.productService.getProducts();
+  // }
 
   elements: any = [
     {id: 1, first: 'Mark', last: 'Otto', handle: '@mdo'},
@@ -64,6 +65,22 @@ export class AppComponent {
 
   favoriteSeason!: string;
   seasons: string[] = ['Winter', 'Spring', 'Summer', 'Autumn'];
+
+  constructor(private http: HttpClient){  }
+  
+  users: any;
+
+  ngOnInit() {
+    this.getUsers();
+  }
+
+  getUsers() {
+    this.http.get('https://localhost:5001/api/users').subscribe(response => {
+      this.users = response;
+    }, error => {
+      console.log(error);
+    })
+  }
 }
 
 
