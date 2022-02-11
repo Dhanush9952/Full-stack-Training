@@ -1,4 +1,41 @@
 
 
-<p>checkboxes works!</p>
+<h2>checkboxes:</h2>
+<div *ngFor="let data of movies.movieCollection">
+    <mat-checkbox>
+      {{data.name}}
+    </mat-checkbox>
+  </div>
 
+  <h2>Material Select:</h2>
+  <h4>Basic mat-select</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Favorite food</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+<br>
+  <mat-form-field appearance="fill">
+    <mat-label>Select an option</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option>None</mat-option>
+      <mat-option value="Dog">Dog</mat-option>
+      <mat-option value="Cow">Cow</mat-option>
+      <mat-option value="Fox">Fox</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <h3>You have selected: <h3 style="font-weight: bold;">{{selected}}</h3></h3>
+  <br>
+  <h3>mat-select using *ngFor</h3>
+<mat-form-field appearance="fill">
+  <mat-label>State</mat-label>
+  <mat-select>
+    <mat-option>None</mat-option>
+    <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+  </mat-select>
+</mat-form-field>
+<p>You have selected:{{null}}</p>
+  <br><br>

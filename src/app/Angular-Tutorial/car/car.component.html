@@ -15,13 +15,25 @@
 
 
 <h2>Grid List Example: </h2>
-<mat-grid-list cols="3" rowHeight="1:1">
-	
-    <mat-grid-tile>First Grid</mat-grid-tile>
-    <mat-grid-tile>Second Grid</mat-grid-tile>
-    <mat-grid-tile>Third Grid</mat-grid-tile>
-    <mat-grid-tile>Fourth Grid</mat-grid-tile>
-    <mat-grid-tile>Fifth Grid</mat-grid-tile>
+<mat-grid-list cols="2" rowHeight="1:1">
+	<h1>Material-Select-option</h1>
+    <mat-grid-tile class="g1">
+        
+        <mat-form-field appearance="fill">
+            <mat-label>Select an option</mat-label>
+            <mat-select [(value)]="selected">
+              <mat-option>None</mat-option>
+              <mat-option value="Dog">Dog</mat-option>
+              <mat-option value="Cow">Cow</mat-option>
+              <mat-option value="Fox">Fox</mat-option>
+            </mat-select>
+          </mat-form-field>
+          
+    </mat-grid-tile>
+    <mat-grid-tile><h3>You have selected: <h1 style="font-weight: bold; text-align: center;">{{selected}}</h1></h3></mat-grid-tile>
+    <mat-grid-tile><h3>Current Date is: <h2>{{date | date}}</h2></h3></mat-grid-tile>
+    <mat-grid-tile><h2>{{'Knowledge in uppercase'| uppercase}}</h2></mat-grid-tile>
+    <mat-grid-tile><h2>Indian Rupee:{{ 123456 | currency:'INR' }}<br>American Dollar:{{ 123456 | currency:'USD':'code' }}</h2></mat-grid-tile>
     <mat-grid-tile>Sixth Frid</mat-grid-tile>
     
 </mat-grid-list>

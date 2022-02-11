@@ -6,9 +6,13 @@ button{
 }
 h2{
     text-align: center;
+    font-weight: bold;
 }
 
 mat-grid-tile {
-    background: lightblue;
+    background: rgb(221, 221, 221);
   }
-  
+
+.g1{
+    background-color: white;
+}

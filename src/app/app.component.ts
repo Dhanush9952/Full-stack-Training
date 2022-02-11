@@ -1,20 +1,15 @@
 import { Component,Injectable,OnInit } from '@angular/core';
-import { ProductService } from './product.service';
 import { Product } from './product';
-import {MatTableModule} from '@angular/material/table'
-import { MatTabsModule } from '@angular/material/tabs' ;
-import { MatIconModule } from '@angular/material/icon' ;
-import { MatFormFieldModule } from '@angular/material/form-field' ;
-import { MatSelectModule } from '@angular/material/select' ;
-import { FormControl } from "@angular/forms";
-import { Validators } from "@angular/forms";
 import { HttpClient } from '@angular/common/http';
+import { TimeService } from './Angular-Tutorial/time.service';
+import { AccountService } from './_services/account.service';
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [AccountService],
 })
 
 
@@ -66,8 +61,12 @@ export class AppComponent implements OnInit{
   favoriteSeason!: string;
   seasons: string[] = ['Winter', 'Spring', 'Summer', 'Autumn'];
 
-  constructor(private http: HttpClient){  }
-  
+  sum: number = 0;
+  constructor(private http: HttpClient, private timeService: TimeService, acc1:AccountService){ 
+    this.sum = acc1.add(1,2,3,4);
+   }
+
+ 
   users: any;
 
   ngOnInit() {
@@ -81,6 +80,7 @@ export class AppComponent implements OnInit{
       console.log(error);
     })
   }
+  
 }
 
 

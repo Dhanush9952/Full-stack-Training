@@ -37,3 +37,6 @@ section {
 mat-grid-tile {
   background: lightblue;
 }
+a{
+  text-decoration: none;
+}

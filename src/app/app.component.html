@@ -4,6 +4,13 @@
 <router-outlet></router-outlet>
 <div class="container">
     <h1 class="heading"><strong>Services </strong>Angular</h1>
+
+    <!-- <mat-progress-bar mode="query" color="accent"></mat-progress-bar>
+    <mat-progress-bar color="accent" mode="determinate" value="40"></mat-progress-bar> -->
+    <h1>
+      Welcome to {{ title }}!
+      Sum is {{sum}}
+    </h1>
  
     <ul>
       <li *ngFor='let user of users'>{{user.id}} - {{user.userName}}</li>
@@ -92,6 +99,7 @@ brand="'Tesla'"
 
 <app-material-buttons></app-material-buttons>>
 <app-forms></app-forms>
+
 </div>
 
 

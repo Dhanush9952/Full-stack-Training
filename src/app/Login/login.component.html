@@ -1,1 +1,30 @@
 <h1>Login Page</h1>
+<div class="container">
+    <h2>Angular Material Form Field Example:</h2>
+  
+  
+
+    <!-- Fill form field -->
+    <p>
+      <mat-form-field appearance="outline" class="name">
+        <mat-label>Username:</mat-label>
+        <input matInput placeholder="Your username">
+        <mat-icon matSuffix>person_outline</mat-icon>
+        <mat-hint>Use unique username</mat-hint>
+      </mat-form-field>
+    </p>
+    <!-- Outline form field -->
+    <p>
+      <mat-form-field appearance="outline" class="password">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Your password" type="password">
+        <mat-icon matSuffix>lock</mat-icon>
+        <mat-hint>Min 8 char 1 number and 1 alpha</mat-hint>
+      </mat-form-field>
+    </p>
+  
+    <button mat-raised-button color="warn" type="reset" class="reset-btn">Reset</button>
+    <button mat-raised-button color="primary" type="submit" class="submit-btn">Submit</button>
+  </div>
+  <br><br>
+  <hr>

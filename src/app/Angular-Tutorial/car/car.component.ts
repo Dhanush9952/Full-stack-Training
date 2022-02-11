@@ -1,3 +1,4 @@
+import { Time } from '@angular/common';
 import { Variable } from '@angular/compiler/src/render3/r3_ast';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
@@ -14,7 +15,12 @@ export class CarComponent implements OnInit {
   @Input()
   brand!: string;
   @Output() sendPurchaseInfo = new EventEmitter<{price: number, brand: string}>();
-  constructor() { }
+  
+  date: Date;
+
+  constructor() {
+    this.date = new Date();
+   }
 
   ngOnInit(): void {
   }
@@ -43,4 +49,8 @@ export class CarComponent implements OnInit {
     this.num1 = true;
     this.clicker1 = 'Slider also enabled!'
   }
+
+  selected = 'option2';
+
+  
 }
